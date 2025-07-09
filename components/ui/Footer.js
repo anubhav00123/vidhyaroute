@@ -1,0 +1,144 @@
+import React from "react";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaDribbble } from "react-icons/fa";
+
+const Footer = () => {
+  return (
+    <footer
+      className="bg-dark text-white py-5"
+      style={{ backgroundImage: 'url("/images/buildingbg.png")', backgroundColor: '#0F181D' }}
+    >
+      <div className="container">
+        <div className="row">
+          {/* Logo and Description Column */}
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="mb-4">
+              <img
+                src="/images/logo.png" // Replace with your actual logo path
+                alt="Vidhyaarohee"
+                style={{ width: 80, height: 80 }}
+                className="mb-3"
+              />
+              <p className="text-white mb-4">
+                Sed gravida nisl a porta tincidunt. Integer aliquam nisl.
+              </p>
+            </div>
+            
+            {/* Contact Information */}
+            <div className="mb-3">
+              <div className="d-flex align-items-center mb-2">
+                <FaPhone style={{color:"#5E789C"}} className="me-3" />
+                <span>+88 12345 6987 231</span>
+              </div>
+              <div className="d-flex align-items-center mb-2">
+                <FaEnvelope style={{color:"#5E789C"}} className="me-3" />
+                <span>info@example.com</span>
+              </div>
+              <div className="d-flex align-items-center mb-3">
+                <FaMapMarkerAlt style={{color:"#5E789C"}} className="me-3" />
+                <span>380 St Kilda Road, Melbourne</span>
+              </div>
+            </div>
+
+            {/* Social Media Icons */}
+            <div className="d-flex gap-3">
+              <a href="#" className="text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style={{ width: 40, height: 40, backgroundColor:"#5E789C" }}>
+                <FaFacebookF />
+              </a>
+              <a href="#" className="text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style={{ width: 40, height: 40,backgroundColor:"#5E789C" }}>
+                <FaInstagram />
+              </a>
+              <a href="#" className="text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style={{ width: 40, height: 40,backgroundColor:"#5E789C" }}>
+                <FaTwitter />
+              </a>
+              <a href="#" className="text-white rounded-circle p-2 d-flex align-items-center justify-content-center" style={{ width: 40, height: 40,backgroundColor:"#5E789C" }}>
+                <FaDribbble />
+              </a>
+            </div>
+          </div>
+
+          {/* Explore Column */}
+          <div className="col-lg-4 col-md-6 mb-4">
+            <h5 className="text-white mb-4 position-relative">
+              Explore
+              <div className="border-bottom border-primary position-absolute" style={{ width: 50, height: 2, bottom: -10, left: 0 }}></div>
+            </h5>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Employment & Jobs
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Government & Elections
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Real Estate & Buildings
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Health & Medical
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Transport & Traffic
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Useful Links Column */}
+          <div className="col-lg-4 col-md-6 mb-4">
+            <h5 className="text-white mb-4 position-relative">
+              Useful Links
+              <div className="border-bottom border-primary position-absolute" style={{ width: 50, height: 2, bottom: -10, left: 0 }}></div>
+            </h5>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Administration
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Fire Services
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Business
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Taxation
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none hover-text-white">
+                  Circular's And Go's
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Copyright Section */}
+        <div className="row mt-4 pt-4 border-top border-secondary">
+          <div className="col-12 text-center">
+            <p className="text-white mb-0">
+              Copyright By © <a href="#" className="text-decoration-none" style={{color:"#5E789C"}}>immigratie</a> - 2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
