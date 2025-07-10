@@ -36,16 +36,19 @@ body {
 /* === Typography === */
 a {
   color: var(--primary-color);
-  text-decoration: none;
+  text-decoration: none!important;
   transition: color 0.3s ease;
 }
 
+.bg-blue {
+  background-color: var(--primary-color);
+}
 .text-blue {
   color: #032b66;
 }
 
 a:hover {
-  color: var(--link-hover);
+  color: #81C042
 }
 
 /* === Buttons === */
@@ -66,7 +69,7 @@ a:hover {
 }
 
 .btn-blue {
-  text-decoration: none!important;
+  text-decoration: none !important;
   background-color: var(--primary-color);
   color: var(--text-light);
   padding: 14px 26px;
@@ -77,11 +80,11 @@ a:hover {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.btn-blue:hover{
+.btn-blue:hover {
   background-color: #4c668f;
-  color: var(--text-light)!important;
+  color: var(--text-light) !important;
 }
-.text-gray{
+.text-gray {
   color: #888888;
 }
 
@@ -471,6 +474,30 @@ a:hover {
 
 /*********************************  Start with line  **********************************/
 
+.star-with-lines-container-white {
+  display: flex;
+  align-items: center; /* Vertically center the star with the lines */
+  justify-content: center; /* Horizontally center the whole element */
+  font-size: 14px; /* Adjust font size if needed for text next to lines */
+  font-weight: 600;
+  color: #fff; /* Color of the lines and text if any */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.star-with-lines-container-white::before,
+.star-with-lines-container-white::after {
+  content: "";
+  display: block; /* Make them block-level to apply width/height */
+  width: 20px; /* Length of the lines */
+  height: 1px; /* Thickness of the lines */
+  background-color: #fff; /* Color of the lines */
+  margin: 0 10px; /* Space between lines and the star */
+}
+
+
+
 .star-with-lines-container {
   display: flex;
   align-items: center; /* Vertically center the star with the lines */
@@ -500,6 +527,20 @@ a:hover {
   /* If the star image itself has transparent padding, you might need to adjust margin here */
 }
 
+/*********************************** Timeline Banner  **********************************/
+.timeline-banner {
+  height: 35vh;
+  background-color: #032B66;
+}
+
+.heading-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 40px;
+}
 
 /*********************************** Footer  ***********************************/
 

@@ -4,28 +4,74 @@ import SectionHeading from "./ui/SectionHeading";
 const Timeline = () => {
   return (
     <section className="py-5 bg-white position-relative overflow-hidden">
+      <div className=" timeline-banner w-full" style={{backgroundImage:"url('/images/mapbg.png')", backgroundBlendMode:"multiply", backgroundColor:"#032B66"}}>
+        <div className="text-center heading-div">
+          <span className="visa-label d-block text-white">STUDENT JOURNEY</span>
+          <div className="star-with-lines-container-white my-2">
+            <img
+              src="/images/icons/whitestar.png"
+              alt="Star Icon"
+              width={25}
+              height={20}
+              className="star-image"
+            />
+          </div>
+          <h2 className="fs-3 fw-bold text-white mb-0">Guiding Your Study Abroad Journey Step-by-Step</h2>
+        </div>
+    
+      </div>
       <div className="container py-5">
-        <SectionHeading
-          label="STUDENT JOURNEY"
-          title="Guiding Your Study Abroad Journey Step-by-Step"
-        />
-
+    
         {/* Timeline Header */}
         <div className="position-relative mb-3">
-          {/* Timeline Line placed over step numbers */}
+          {/* Timeline Line with End Dots */}
           <div
-            className="position-absolute start-0 end-0"
+            className="position-absolute start-0 end-0 d-flex align-items-center"
             style={{
-              top: '75px', // This positions the line vertically around step numbers
-              borderTop: '2px solid #0d6efd',
+              top: "75px",
               zIndex: 0,
             }}
-          ></div>
+          >
+            {/* Left dot */}
+            <div
+              style={{
+                width: 12,
+                height: 12,
+                backgroundColor: "#81C042",
+                borderRadius: "50%",
+              }}
+            ></div>
+
+            {/* Line */}
+            <div
+              style={{
+                flex: 1,
+                borderTop: "5px solid #032B66",
+              }}
+            ></div>
+
+            {/* Right dot */}
+            <div
+              style={{
+                width: 12,
+                height: 12,
+                backgroundColor: "#81C042",
+                borderRadius: "50%",
+              }}
+            ></div>
+          </div>
 
           {/* Icons and Step Numbers */}
-          <div className="d-flex justify-content-between align-items-start position-relative" style={{ zIndex: 1 }}>
+          <div
+            className="d-flex justify-content-between align-items-start position-relative"
+            style={{ zIndex: 1 }}
+          >
             {[1, 2, 3, 4, 5].map((step, index) => (
-              <div key={index} className="text-center position-relative" style={{ flex: 1 }}>
+              <div
+                key={index}
+                className="text-center position-relative"
+                style={{ flex: 1 }}
+              >
                 {/* Icon */}
                 <img
                   src={`/images/icons/${step}.png`}
@@ -35,16 +81,17 @@ const Timeline = () => {
 
                 {/* Step Number Circle */}
                 <div
-                  className="position-relative bg-primary text-white rounded-circle mx-auto"
+                  className="position-relative text-white rounded-circle mx-auto"
                   style={{
                     width: 36,
+                    backgroundColor: "#4E3C86",
                     height: 36,
-                    lineHeight: '32px',
+                    lineHeight: "32px",
                     fontSize: 14,
                     fontWeight: 600,
-                    marginTop: '-10px', // Brings it up to sit over the line
+                    marginTop: "-10px",
                     zIndex: 2,
-                    border: '3px solid white',
+                    border: "3px solid white",
                   }}
                 >
                   {step}
@@ -54,8 +101,8 @@ const Timeline = () => {
           </div>
         </div>
 
-        {/* Cards Below Timeline */}
-        <div className="row g-4 text-center pt-4">
+        {/* Cards Below Timeline - 5 in a row */}
+        <div className="d-flex justify-content-between flex-wrap pt-4">
           {[
             {
               title: "Getting Admission Offer from a University",
@@ -64,8 +111,8 @@ const Timeline = () => {
                   Research & Shortlist Universities: Based on country, course,
                   budget, and ranking. <br />
                   <br />
-                  Prepare Application Documents: Includes academic
-                  transcripts, SOP, LORs, resume, and test scores. <br />
+                  Prepare Application Documents: Includes academic transcripts,
+                  SOP, LORs, resume, and test scores. <br />
                   <br />
                   Apply to Universities: Often via portals (e.g. UCAS).
                 </>
@@ -111,17 +158,22 @@ const Timeline = () => {
               content: (
                 <>
                   Pre-departure briefing <br />
+                  <br />
                   Accommodation & Insurance <br />
+                  <br />
+                  Forex and Travel Insurance <br /><br />
                   University registration & orientation
                 </>
               ),
             },
           ].map((item, index) => (
-            <div className="col-md-6 col-lg-2 mx-auto" key={index}>
-              <div className="border rounded p-3 shadow-sm h-100 text-start">
-                <h6 className="fw-bold text-center">{item.title}</h6>
-                <p className="small text-muted mt-2">{item.content}</p>
-              </div>
+            <div
+              key={index}
+              style={{ width: "19%", minWidth: "220px" }}
+              className="border rounded p-3 shadow-sm text-start"
+            >
+              <h6 className="text-center">{item.title}</h6>
+              <p className="text-muted mt-2" style={{fontSize:"13px"}}>{item.content}</p>
             </div>
           ))}
         </div>

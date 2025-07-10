@@ -10,6 +10,9 @@ import ExpertGuidanceSection from "@/components/ExpertGuidanceSection";
 import WhyChoose from "@/components/WhyChoose";
 import Timeline from "@/components/Timeline";
 import Footer from "@/components/ui/Footer";
+import Review from "@/components/Review";
+import CountryGrid from "@/components/CountryGrid";
+import PartnerBanks from "@/components/PartnerBanks";
 
 
 
@@ -28,7 +31,10 @@ export default function Home() {
      <VisaCategoriesSection/>
      <ExpertGuidanceSection/>
      <WhyChoose/>
-     {/* <Timeline/> */}
+     <Timeline/>
+     <Review/>
+     <CountryGrid/>
+     <PartnerBanks/>
      <Footer/>
     </>
   );
