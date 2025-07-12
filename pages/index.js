@@ -14,9 +14,29 @@ import Review from "@/components/Review";
 import CountryGrid from "@/components/CountryGrid";
 import PartnerBanks from "@/components/PartnerBanks";
 
-
-
 export default function Home() {
+  const whyItems = [
+    {
+      icon: "/images/icons/chat.png",
+      title: "Global Education",
+      desc: "From course selection to visa approval, Vidhyaa Route guides your study abroad journey completely.",
+    },
+    {
+      icon: "/images/icons/globe.png",
+      title: "Worldwide Insight",
+      desc: "We guide admissions to top countries like the UK, USA, Canada, and more.",
+    },
+    {
+      icon: "/images/icons/hands.png",
+      title: "Personal Mentorship",
+      desc: "Vidhyaa Route offers personalized guidance based on goals, academics, and finances.",
+    },
+    {
+      icon: "/images/icons/money.png",
+      title: "Loan Guidance",
+      desc: "We assist students in securing personalized education loans through trusted banks and financial institutions.",
+    },
+  ];
   return (
     <>
       <Head>
@@ -25,17 +45,21 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     <Navbar/>
-     <HomeBanner/>
-     {/* <BreadcrumbBanner/> */}
-     <VisaCategoriesSection/>
-     <ExpertGuidanceSection/>
-     <WhyChoose/>
-     <Timeline/>
-     <Review/>
-     <CountryGrid/>
-     <PartnerBanks/>
-     <Footer/>
+      <Navbar />
+      <HomeBanner />
+      {/* <BreadcrumbBanner/> */}
+      <VisaCategoriesSection />
+      <ExpertGuidanceSection />
+      <WhyChooseSection
+        label="WHY CHOOSE US"
+        title="Vidhyaa Route is your trusted partner, guiding you from admission to arrival abroad."
+        items={whyItems}
+      />
+      <Timeline />
+      <Review />
+      <CountryGrid />
+      <PartnerBanks />
+      <Footer />
     </>
   );
 }

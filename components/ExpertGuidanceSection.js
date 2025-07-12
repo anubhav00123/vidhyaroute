@@ -56,7 +56,7 @@ const ExpertGuidanceSection = () => {
 
           {/* Right Images Grid */}
           <div className="col-lg-5">
-            <div className="d-flex flex-column gap-3">
+            <div className="d-flex flex-column gap-2">
               <div className="row g-3">
                 <div className="col-4">
                   <Image
@@ -68,21 +68,21 @@ const ExpertGuidanceSection = () => {
                   />
                 </div>
                 <div className="col-6">
-                  <div className="d-flex flex-column gap-3">
+                  <div className="d-flex flex-column gap-2 h-100">
                     <Image
                       src="/images/aboutus/twotraveller.jpg"
                       alt="Couple Exploring"
                       width={500}
                       height={500}
-                      className="img-fluid rounded"
+                      className="img-fluid rounded h-100"
                     />
 
                     <Image
                       src="/images/aboutus/usflag.jpg"
                       alt="Visa Document"
                       width={500}
-                      height={250}
-                      className="img-fluid rounded mt-2"
+                      height={350}
+                      className="img-fluid rounded mt-2 h-100"
                     />
                   </div>
                 </div>

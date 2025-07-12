@@ -36,19 +36,24 @@ body {
 /* === Typography === */
 a {
   color: var(--primary-color);
-  text-decoration: none!important;
+  text-decoration: none !important;
   transition: color 0.3s ease;
 }
 
 .bg-blue {
   background-color: var(--primary-color);
 }
+
+.bg-blue-dark {
+  background: #032b66;
+}
+
 .text-blue {
   color: #032b66;
 }
 
 a:hover {
-  color: #81C042
+  color: #81c042;
 }
 
 /* === Buttons === */
@@ -99,7 +104,6 @@ a:hover {
 }
 
 /**************************  Navbar  **********************************/
-
 
 .navbar-top {
   background-color: var(--primary-color);
@@ -334,16 +338,16 @@ a:hover {
   .nav-empty {
     flex: 0 0 20%;
   }
-  
+
   .navbar-bottom-wrapper {
     flex: 0 0 80%;
   }
-  
+
   .navbar-bottom .nav-link {
     margin: 0 15px;
     font-size: 14px;
   }
-  
+
   .profile-section {
     margin-left: 15px;
   }
@@ -357,64 +361,64 @@ a:hover {
     padding: 10px 0;
   }
 
-  .profile-image{
+  .profile-image {
     display: none;
   }
-  
+
   .navbar-top .left-info {
     padding-left: 15px;
     margin-bottom: 10px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .navbar-top .right-info {
     padding-right: 15px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .navbar-top .info-item {
     margin-right: 15px;
     margin-bottom: 5px;
   }
-  
+
   .info-text {
     display: none;
   }
-  
+
   .search-container {
     margin-left: 15px;
     margin-right: 10px;
   }
-  
+
   .search-container input {
     width: 80px;
   }
-  
+
   .appointment-btn {
     margin-left: 10px;
     padding: 8px 12px;
     font-size: 12px;
   }
-  
+
   /* Bottom Navbar Mobile */
   .navbar-bottom {
     flex-direction: column;
     padding-bottom: 0;
   }
-  
+
   .nav-empty {
     display: none;
   }
-  
+
   .navbar-bottom-wrapper {
     flex: 1;
     border-bottom-left-radius: 0;
     padding: 15px 20px;
     position: relative;
   }
-  
+
   .mobile-menu-btn {
     display: block;
     position: absolute;
@@ -423,13 +427,13 @@ a:hover {
     transform: translateY(-50%);
     order: 3; /* Ensure it appears last */
   }
-  
+
   .profile-section {
     margin-left: 0;
     order: 1; /* This makes it appear on the left side on mobile */
     margin-right: auto; /* Push it to the left */
   }
-  
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -446,11 +450,11 @@ a:hover {
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     order: 2; /* Middle order */
   }
-  
+
   .nav-links-open {
     left: 0;
   }
-  
+
   .nav-links .nav-link {
     margin: 0 0 25px 0;
     font-size: 18px;
@@ -458,15 +462,15 @@ a:hover {
     border-bottom: 1px solid #f0f0f0;
     width: 100%;
   }
-  
+
   .nav-links .nav-link:last-child {
     border-bottom: none;
   }
-  
+
   .profile-text {
     text-align: left; /* Changed from center to left for mobile */
   }
-  
+
   .mobile-overlay {
     display: block;
   }
@@ -479,65 +483,65 @@ a:hover {
     padding-left: 10px;
     padding-right: 10px;
   }
-  
+
   .navbar-top .info-item {
     margin-right: 10px;
     font-size: 12px;
   }
-  
+
   .navbar-top .social-icons a {
     margin-right: 12px;
     font-size: 14px;
   }
-  
+
   .search-container {
     margin-left: 10px;
     margin-right: 5px;
   }
-  
+
   .search-container input {
     width: 60px;
     font-size: 12px;
   }
-  
+
   .appointment-btn {
     margin-left: 5px;
     padding: 6px 10px;
     font-size: 11px;
   }
-  
+
   .navbar-bottom-wrapper {
     padding: 12px 15px;
   }
-  
+
   .mobile-menu-btn {
     right: 15px; /* Changed from left to right */
     font-size: 22px;
   }
-  
+
   .nav-links {
     width: 85%;
     padding: 70px 20px 20px;
   }
-  
+
   .nav-links .nav-link {
     font-size: 16px;
     margin-bottom: 20px;
   }
-  
+
   .profile-section img {
     width: 40px;
     height: 40px;
   }
-  
+
   .profile-text p {
     font-size: 12px;
   }
-  
+
   .profile-text p:first-child {
     font-size: 11px;
   }
-  
+
   .profile-text p:last-child {
     font-size: 13px;
   }
@@ -551,7 +555,7 @@ a:hover {
     justify-content: center;
     width: 30px;
   }
-  
+
   .navbar-top .info-item svg {
     margin-right: 0;
   }
@@ -563,10 +567,18 @@ a:hover {
   background-blend-mode: multiply;
   background-color: #002f87cc;
 }
+.breadcrumbs {
+  border: 0.5px solid white;
+  padding: 22px 35px;
+  border-radius: 10px;
+}
 .banner-content {
   display: flex;
   flex-direction: column;
-  padding: 150px 0px;
+  padding: 120px 0px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 .blob-image {
   right: 0;
@@ -689,7 +701,7 @@ a:hover {
     padding-left: 3rem;
     padding-right: 3rem;
   }
-  
+
   .visa-section {
     padding: 4rem 0;
   }
@@ -700,27 +712,27 @@ a:hover {
   .visa-section {
     padding: 3rem 0;
   }
-  
+
   .card-row {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
+
   .card-image-wrapper {
     height: 180px;
   }
-  
+
   .card-icon {
     width: 45px;
     height: 45px;
     top: -22px;
   }
-  
+
   .list-item {
     font-size: 14px;
     margin-bottom: 8px;
   }
-  
+
   .list-item svg {
     font-size: 16px;
   }
@@ -731,16 +743,16 @@ a:hover {
   .visa-section {
     padding: 2rem 0;
   }
-  
+
   .card-row {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  
+
   .card-image-wrapper {
     height: 160px;
   }
-  
+
   .card-icon {
     width: 40px;
     height: 40px;
@@ -748,16 +760,16 @@ a:hover {
     left: 20px;
     transform: none;
   }
-  
+
   .card-body {
     padding: 1rem;
   }
-  
+
   .list-item {
     font-size: 13px;
     margin-bottom: 6px;
   }
-  
+
   .list-item svg {
     font-size: 14px;
     margin-right: 8px;
@@ -770,18 +782,18 @@ a:hover {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
-  
+
   .card-body {
     padding: 0.75rem;
   }
-  
+
   .card-icon {
     width: 35px;
     height: 35px;
     top: -18px;
     left: 15px;
   }
-  
+
   .list-item {
     font-size: 12px;
   }
@@ -864,8 +876,6 @@ a:hover {
   margin: 0 10px; /* Space between lines and the star */
 }
 
-
-
 .star-with-lines-container {
   display: flex;
   align-items: center; /* Vertically center the star with the lines */
@@ -898,7 +908,7 @@ a:hover {
 /*********************************** Timeline Banner  **********************************/
 .timeline-banner {
   height: 35vh;
-  background-color: #032B66;
+  background-color: #032b66;
 }
 
 .heading-div {
@@ -947,7 +957,7 @@ a:hover {
 }
 
 .timeline-card h6 {
-  color: #032B66;
+  color: #032b66;
   font-weight: 600;
   margin-bottom: 1rem;
   line-height: 1.3;
@@ -985,7 +995,7 @@ a:hover {
 .timeline-step-number {
   width: 36px;
   height: 36px;
-  background-color: #4E3C86;
+  background-color: #4e3c86;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -1006,17 +1016,17 @@ a:hover {
   left: 0;
   right: 0;
   height: 5px;
-  background-color: #032B66;
+  background-color: #032b66;
   z-index: 0;
 }
 
 .timeline-line::before,
 .timeline-line::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 12px;
   height: 12px;
-  background-color: #81C042;
+  background-color: #81c042;
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
@@ -1037,30 +1047,30 @@ a:hover {
   .timeline-banner {
     height: 30vh;
   }
-  
+
   .heading-div {
     padding-bottom: 30px;
   }
-  
+
   .timeline-cards-container {
     padding: 0 1rem;
     gap: 0.8rem;
   }
-  
+
   .timeline-card {
     min-width: 200px;
     padding: 1.2rem;
   }
-  
+
   .timeline-step {
     max-width: 120px;
   }
-  
+
   .timeline-step img {
     width: 50px;
     height: 50px;
   }
-  
+
   .timeline-step-number {
     width: 32px;
     height: 32px;
@@ -1074,29 +1084,29 @@ a:hover {
     height: 25vh;
     min-height: 200px;
   }
-  
+
   .heading-div {
     padding-bottom: 20px;
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
+
   .heading-div h2 {
     font-size: 1.5rem !important;
   }
-  
+
   /* Hide timeline steps on mobile */
   .timeline-container {
     display: none;
   }
-  
+
   .timeline-cards-container {
     padding: 0 0.5rem;
     gap: 1rem;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .timeline-card {
     width: 100%;
     max-width: 100%;
@@ -1104,13 +1114,13 @@ a:hover {
     margin: 0;
     padding: 1.5rem;
   }
-  
+
   .timeline-card h6 {
     font-size: 1rem;
     text-align: center;
     margin-bottom: 1rem;
   }
-  
+
   .timeline-card p {
     font-size: 14px;
     text-align: left;
@@ -1122,29 +1132,29 @@ a:hover {
   .timeline-banner {
     height: 200px;
   }
-  
+
   .heading-div {
     padding-bottom: 15px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  
+
   .heading-div h2 {
     font-size: 1.3rem !important;
   }
-  
+
   .timeline-cards-container {
     padding: 0 0.25rem;
   }
-  
+
   .timeline-card {
     padding: 1rem;
   }
-  
+
   .timeline-card h6 {
     font-size: 0.9rem;
   }
-  
+
   .timeline-card p {
     font-size: 13px;
   }
@@ -1155,23 +1165,23 @@ a:hover {
   .timeline-banner {
     height: 180px;
   }
-  
+
   .heading-div h2 {
     font-size: 1.1rem !important;
   }
-  
+
   .timeline-cards-container {
     padding: 0;
   }
-  
+
   .timeline-card {
     padding: 0.8rem;
   }
-  
+
   .timeline-card h6 {
     font-size: 0.85rem;
   }
-  
+
   .timeline-card p {
     font-size: 12px;
   }
@@ -1211,4 +1221,21 @@ a:hover {
 
 .footer p {
   font-size: 0.9rem;
+}
+
+/******************************** About Us Page  ***********************************/
+
+.countries-row {
+  padding: 0px 100px;
+}
+.countries-tab {
+  text-align: center;
+  color: var(--primary-color);
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+
+.flag-div {
+  background-color: #fff;
+  padding: 24px 18px;
 }
