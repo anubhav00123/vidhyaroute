@@ -8,7 +8,7 @@ const businessvisa = () => {
   return (
     <>
     <Navbar/>
-    <BreadcrumbBanner/>
+    <BreadcrumbBanner title="Business Visa" />
     <div className='container' style={{marginTop:"100px"}}>
         <div className='row'>
             <Sidebar/>

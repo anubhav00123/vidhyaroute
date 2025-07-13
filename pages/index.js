@@ -3,16 +3,15 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/Navbar";
-import BreadcrumbBanner from "@/components/BreadCrumbBanner";
 import VisaCategoriesSection from "@/components/VisaCategoriesSection";
 import HomeBanner from "@/components/HomeBanner";
 import ExpertGuidanceSection from "@/components/ExpertGuidanceSection";
-import WhyChoose from "@/components/WhyChoose";
 import Timeline from "@/components/Timeline";
 import Footer from "@/components/ui/Footer";
 import Review from "@/components/Review";
 import CountryGrid from "@/components/CountryGrid";
 import PartnerBanks from "@/components/PartnerBanks";
+import WhyChooseSection from "@/components/WhyChoose";
 
 export default function Home() {
   const whyItems = [

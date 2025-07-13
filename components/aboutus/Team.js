@@ -39,11 +39,8 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div className="col-12 col-md-6 col-lg-3 mb-4" key={index}>
               <div
-                className="overflow-hidden bg-white shadow position-relative mx-auto"
+                className="rounded-4 overflow-hidden bg-white shadow position-relative"
                 style={{
-                  width: "280px",
-                  height: "400px",
-                  borderRadius: "200px / 300px", // Oval shape
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                 }}
@@ -56,7 +53,7 @@ const Team = () => {
                   e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.1)";
                 }}
               >
-                {/* Full Image Top */}
+                {/* Full Card Image */}
                 <div style={{ height: "250px", overflow: "hidden" }}>
                   <img
                     src={member.image}
@@ -72,7 +69,7 @@ const Team = () => {
                   style={{
                     width: "40px",
                     height: "40px",
-                    bottom: "110px",
+                    bottom: "80px",
                     left: "50%",
                     transform: "translateX(-50%)",
                     boxShadow: "0 0 6px rgba(0,0,0,0.1)",
@@ -112,7 +109,7 @@ const Team = () => {
 
                 {/* Info */}
                 <div className="p-3 text-center">
-                  <h5 className="text-primary fw-bold mb-1">{member.name}</h5>
+                  <h5 className="text-blue fw-bold mb-1">{member.name}</h5>
                   <p className="text-muted mb-0">{member.role}</p>
                 </div>
               </div>

@@ -36,7 +36,8 @@ const about = () => {
   return (
     <>
       <Navbar />
-      <BreadcrumbBanner />
+      <BreadcrumbBanner title="About Us" />
+
       <ExpertGuidanceSection />
       <div
         className="container position-relative p-4 "
@@ -80,16 +81,18 @@ const about = () => {
 
       <CountrySection />
       <ApplyVisa />
-      <div style={{marginTop:"100px"}}>
-      <WhyChooseSection
-        label="WHY CHOOSE US"
-        title="Offer custom-made services that our customer needs."
-        items={whyItems}
-      />
+      <div style={{ marginTop: "100px" }}>
+        <div className="high-margin">
+          <WhyChooseSection
+            label="WHY CHOOSE US"
+            title="Offer custom-made services that our customer needs."
+            items={whyItems}
+          />
+        </div>
       </div>
-      <SponsorBanner/>
-      {/* <Team/> */}
-      <Footer/>
+      <SponsorBanner />
+      <Team />
+      <Footer />
     </>
   );
 };

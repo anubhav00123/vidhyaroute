@@ -74,17 +74,17 @@ const Navbar = () => {
             <Link href="/about" className="nav-link" onClick={closeMenu}>
               About
             </Link>
-            <Link href="/coaching" className="nav-link" onClick={closeMenu}>
+            <Link href="/oetcoaching" className="nav-link" onClick={closeMenu}>
               Coaching
             </Link>
             <Link href="/countries" className="nav-link" onClick={closeMenu}>
               Countries
             </Link>
-            <Link href="/visa" className="nav-link" onClick={closeMenu}>
+            <Link href="/businessvisa" className="nav-link" onClick={closeMenu}>
               Visa
             </Link>
-            <Link href="/blog" className="nav-link" onClick={closeMenu}>
-              Blog
+            <Link href="/teamdetails" className="nav-link" onClick={closeMenu}>
+              Team
             </Link>
             <Link href="/contact" className="nav-link" onClick={closeMenu}>
               Contact Us

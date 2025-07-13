@@ -45,7 +45,7 @@ a {
 }
 
 .bg-blue-dark {
-  background: #032b66;
+  background: #032B66;
 }
 
 .text-blue {
@@ -1223,17 +1223,31 @@ a:hover {
   font-size: 0.9rem;
 }
 
+
 /******************************** About Us Page  ***********************************/
 
-.countries-row {
+
+.countries-row{
   padding: 0px 100px;
 }
-.countries-tab {
+.high-margin{
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .countries-row{
+    padding: 0px 10px;
+  }
+  .high-margin{
+    margin-top: 1100px;
+  }
+}
+.countries-tab{
   text-align: center;
   color: var(--primary-color);
-  border-bottom: 1px solid black;
-  padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
 }
+
 
 .flag-div {
   background-color: #fff;
