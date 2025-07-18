@@ -229,6 +229,13 @@ a:hover {
 
 .nav-empty {
   flex: 0 0 30%;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .nav-empty {
+    display: none!important;
+  }
 }
 
 .navbar-bottom-wrapper {
@@ -1253,3 +1260,4 @@ a:hover {
   background-color: #fff;
   padding: 24px 18px;
 }
+

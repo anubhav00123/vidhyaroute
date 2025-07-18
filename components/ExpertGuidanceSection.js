@@ -70,7 +70,7 @@ const ExpertGuidanceSection = () => {
                 <div className="col-6">
                   <div className="d-flex flex-column gap-2 h-100">
                     <Image
-                      src="/images/aboutus/twotraveller.jpg"
+                      src="/images/studentnew.jpg"
                       alt="Couple Exploring"
                       width={500}
                       height={500}

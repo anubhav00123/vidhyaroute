@@ -6,93 +6,102 @@ import { GoLocation } from "react-icons/go";
 import { PiClockLight } from "react-icons/pi";
 import { BsSearch } from "react-icons/bs";
 import { HiMenu, HiX } from "react-icons/hi";
+import AdmissionModal from "./AdmissionModal";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
+
+  // Toggle the mobile menu open/close
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close menu when a link is clicked or overlay is clicked
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
   return (
     <>
-      {/* Top Navbar */}
+      {/* ======= Top Navbar ======= */}
       <div className="navbar-top">
         <div className="left-info">
           <div className="info-item">
-            <HiOutlineMail /> <span className="info-text">info@yourmail.com</span>
+            <HiOutlineMail />
+            <span className="info-text">info@yourmail.com</span>
           </div>
           <div className="info-item">
-            <GoLocation /> <span className="info-text">12 Queen Park, LA, USA</span>
+            <GoLocation />
+            <span className="info-text">12 Queen Park, LA, USA</span>
           </div>
           <div className="info-item">
-            <PiClockLight /> <span className="info-text">Mon - Sat: 9.00 to 18.00</span>
+            <PiClockLight />
+            <span className="info-text">Mon - Sat: 9.00 to 18.00</span>
           </div>
         </div>
+
         <div className="right-info">
           <div className="social-icons">
-            <a href="#">
-              <FaFacebookF />
-            </a>
-            <a href="#">
-              <FaInstagram />
-            </a>
-            <a href="#">
-              <FaTwitter />
-            </a>
+            <a href="#"><FaFacebookF /></a>
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaTwitter /></a>
           </div>
+
           <div className="search-container">
             <input type="text" placeholder="Search..." />
             <BsSearch />
           </div>
+
           <button className="appointment-btn">Appointment</button>
         </div>
       </div>
 
-      {/* Bottom Navbar */}
+      {/* ======= Bottom Navbar ======= */}
       <div className="navbar-bottom">
-        <div className="nav-empty"></div>
+        {/* Centered logo visible on larger screens */}
+        <div className="nav-empty  justify-content-center">
+          <Link href="/">
+          <img
+            src="/images/logo.png"
+            alt="Vidhyaarohee"
+            style={{ width: 80, height: 80 }}
+            className="mt-2 mobile-logo"
+          />
+          </Link>
+        </div>
+
         <div className="navbar-bottom-wrapper">
-          {/* Profile Section */}
+          {/* Button Section */}
           <div className="profile-section">
-            <img src="https://i.imgur.com/4g5d77R.png" alt="Profile" />
-            <div className="profile-text">
-              <p>ENQUIRIES</p>
-              <p>+1-888-456-78-901</p>
-            </div>
+            <button className="btn-blue" onClick={() => setShowModal(true)}>Get Your Admission</button>
           </div>
 
-          {/* Navigation Links */}
-          <div className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`}>
-            <Link href="/" className="nav-link" onClick={closeMenu}>
-              Home
-            </Link>
-            <Link href="/about" className="nav-link" onClick={closeMenu}>
-              About
-            </Link>
-            <Link href="/oetcoaching" className="nav-link" onClick={closeMenu}>
-              Coaching
-            </Link>
-            <Link href="/countries" className="nav-link" onClick={closeMenu}>
-              Countries
-            </Link>
-            <Link href="/businessvisa" className="nav-link" onClick={closeMenu}>
-              Visa
-            </Link>
-            <Link href="/teamdetails" className="nav-link" onClick={closeMenu}>
-              Team
-            </Link>
-            <Link href="/contact" className="nav-link" onClick={closeMenu}>
-              Contact Us
-            </Link>
+          {/* ======= Navigation Links (Desktop & Mobile) ======= */}
+          <div className={`nav-links ${isMenuOpen ? "nav-links-open" : ""}`}>
+            {/* Mobile Logo (visible only when menu is open) */}
+            {isMenuOpen && (
+              <div className="mobile-logo text-center mb-4">
+                <img
+                  src="/images/logo.png"
+                  alt="Vidhyaarohee"
+                  style={{ width: 100, height: "auto", margin: "0 auto" }}
+                />
+              </div>
+            )}
+
+            <Link href="/" className="nav-link" onClick={closeMenu}>Home</Link>
+            <Link href="/about" className="nav-link" onClick={closeMenu}>About</Link>
+            <Link href="/oetcoaching" className="nav-link" onClick={closeMenu}>Coaching</Link>
+            <Link href="/countries" className="nav-link" onClick={closeMenu}>Countries</Link>
+            <Link href="/businessvisa" className="nav-link" onClick={closeMenu}>Visa</Link>
+            <Link href="/teamdetails" className="nav-link" onClick={closeMenu}>Team</Link>
+            <Link href="/contact" className="nav-link" onClick={closeMenu}>Contact Us</Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
+          {/* ======= Mobile Hamburger Icon ======= */}
+          <button
             className="mobile-menu-btn"
             onClick={toggleMenu}
             aria-label="Toggle menu"
@@ -102,10 +111,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Overlay */}
-      {isMenuOpen && (
-        <div className="mobile-overlay" onClick={closeMenu}></div>
-      )}
+      {/* ======= Mobile Overlay (for dim background click-to-close) ======= */}
+      {isMenuOpen && <div className="mobile-overlay" onClick={closeMenu}></div>}
+      <AdmissionModal isOpen={showModal} onClose={() => setShowModal(false)} />
+
     </>
   );
 };
