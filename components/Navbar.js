@@ -93,9 +93,9 @@ const Navbar = () => {
 
             <Link href="/" className="nav-link" onClick={closeMenu}>Home</Link>
             <Link href="/about" className="nav-link" onClick={closeMenu}>About</Link>
+            <Link href="/businessvisa" className="nav-link" onClick={closeMenu}>Our Services</Link>
             <Link href="/oetcoaching" className="nav-link" onClick={closeMenu}>Coaching</Link>
             <Link href="/countries" className="nav-link" onClick={closeMenu}>Countries</Link>
-            <Link href="/businessvisa" className="nav-link" onClick={closeMenu}>Visa</Link>
             <Link href="/teamdetails" className="nav-link" onClick={closeMenu}>Team</Link>
             <Link href="/contact" className="nav-link" onClick={closeMenu}>Contact Us</Link>
           </div>

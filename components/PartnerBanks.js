@@ -21,10 +21,14 @@ const logos = [
 const PartnerBanks = () => {
   return (
     <section className="py-5 bg-white">
-      <div className="container">
-        <div className="row g-4 justify-content-center align-items-center">
-          {logos.map((logo, index) => (
-            <div key={index} className="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+      <div className="overflow-hidden">
+        <div className="marquee d-flex">
+          {[...logos, ...logos].map((logo, index) => (
+            <div
+              key={index}
+              className="d-flex justify-content-center align-items-center px-4"
+              style={{ minWidth: "150px" }}
+            >
               <img
                 src={logo.src}
                 alt={logo.alt}
@@ -35,6 +39,23 @@ const PartnerBanks = () => {
           ))}
         </div>
       </div>
+
+      {/* Inline styles or move to CSS file */}
+      <style jsx>{`
+        .marquee {
+          animation: scroll 40s linear infinite;
+          width: fit-content;
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 };

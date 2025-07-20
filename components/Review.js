@@ -10,7 +10,7 @@ const blogData = [
     author: "author",
     description:
       "Where did this incorrect belief that everyone dislikes praising happiness come from.",
-    image: "/images/girlonwindow.jpg",
+    image: "/images/smileyoung.jpg",
   },
   {
     title: "Why You Should Plan Your 2022 Trip Abroad",
@@ -26,9 +26,12 @@ const blogData = [
     author: "author",
     description:
       "Where did this incorrect belief that everyone dislikes praising happiness come from.",
-    image: "/images/girlonwindow.jpg",
+    image: "/images/smilefemale.jpg",
   },
 ];
+
+
+
 
 const Review = () => {
   return (

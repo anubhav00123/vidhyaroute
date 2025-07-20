@@ -2,46 +2,45 @@ import { Briefcase, Calendar, CheckCircle, ExternalLink, FileText } from "lucide
 import React from "react";
 
 const ContentPage = () => {
-  const businessActivities = [
-    "Attending business meetings or consultations",
-    "Attending a business convention or conference",
-    "Negotiating contracts",
-    "Conducting market research",
-    "Meeting with clients or partners",
+  const coachingBenefits = [
+    "Personalized training plans for each student",
+    "Expert instructors with healthcare backgrounds",
+    "Mock tests and real-time assessments",
+    "Flexible timing for working professionals",
+    "Comprehensive materials and practice resources",
   ];
 
-  const visaPrograms = [
+  const courseModules = [
     {
-      title: "Visitor Visa B",
-      description: "For temporary visits to conduct business activities",
+      title: "OET Listening Module",
+      description: "Improve listening skills with practical healthcare conversations.",
       image: "/images/visaB.jpg",
-      links: ["Overview", "How to Apply", "Fees"],
+      links: ["Overview", "Curriculum", "Enroll Now"],
     },
     {
-      title: "Visa Waiver Program",
-      description: "For eligible countries with visa waiver agreements",
+      title: "OET Reading Module",
+      description: "Develop critical reading skills for real-world medical scenarios.",
       image: "/images/visawaiver.jpg",
-      links: ["Overview", "How to Apply", "Fees"],
+      links: ["Overview", "Curriculum", "Enroll Now"],
     },
     {
-      title: "Diplomatic Visas",
-      description: "For official government business and diplomatic missions",
+      title: "OET Writing & Speaking",
+      description: "Master communication for patient care and documentation.",
       image: "/images/america.jpg",
-      links: ["Overview", "How to Apply", "Fees"],
+      links: ["Overview", "Curriculum", "Enroll Now"],
     },
   ];
+
   return (
     <div className="col-lg-9 col-md-8">
       <div className="p-4">
         {/* Header Section */}
         <div className="mb-5">
-          <h1 className="display-4 fw-bold text-blue mb-3">Business Visa</h1>
+          <h1 className="display-4 fw-bold text-blue mb-3">OET Coaching for Agencies</h1>
           <p className="lead text-muted">
-            Foreign nationals traveling to the United States to conduct
-            temporary business activities need a visitor visa (B-1) unless
-            qualifying for entry under the Visa Waiver Program. Our
-            comprehensive guide helps you understand the requirements and
-            application process.
+            Empower your candidates to achieve OET success. Our agency-oriented coaching
+            program helps students prepare effectively for all modules of the OET exam
+            with expert guidance and real-time feedback.
           </p>
         </div>
 
@@ -50,39 +49,38 @@ const ContentPage = () => {
           <div className="position-relative rounded overflow-hidden shadow-lg">
             <img
               src="/images/business.jpg"
-              alt="Business Meeting"
+              alt="OET Coaching"
               className="w-100 h-auto"
               style={{ height: "400px", objectFit: "cover" }}
             />
             <div className="position-absolute bottom-0 start-0 bg-dark bg-opacity-75 text-white p-3">
               <p className="mb-0 small">
-                Professional business consultation and visa application
-                assistance
+                Dedicated coaching programs designed for agencies and healthcare aspirants
               </p>
             </div>
           </div>
         </div>
 
-        {/* Business Activities Section */}
+        {/* Coaching Benefits Section */}
         <div className="row mb-5">
           <div className="col-lg-6">
             <div className="bg-white p-4 rounded shadow-sm h-100">
               <h3 className="text-blue mb-4">
                 <Briefcase className="me-2" size={24} />
-                Approved Business Activities
+                Why Partner with Us
               </h3>
               <p className="text-muted mb-3">
-                The B-1 visa covers various legitimate business activities. Here
-                are the most common purposes:
+                Our OET coaching ensures your candidates meet international English
+                standards. We focus on results-driven methods and practical training.
               </p>
               <ul className="list-unstyled">
-                {businessActivities.map((activity, index) => (
+                {coachingBenefits.map((benefit, index) => (
                   <li key={index} className="mb-2 d-flex align-items-start">
                     <CheckCircle
                       className="me-2 text-success flex-shrink-0 mt-1"
                       size={16}
                     />
-                    <span>{activity}</span>
+                    <span>{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -93,47 +91,45 @@ const ContentPage = () => {
             <div className="bg-white p-4 rounded shadow-sm h-100">
               <h3 className="text-blue mb-4">
                 <FileText className="me-2" size={24} />
-                Important Guidelines
+                Key Guidelines
               </h3>
               <div className="alert alert-warning">
-                <strong>Recent Policy Update:</strong> New regulations require
-                proper documentation of business purpose and complete uniform
-                compliance during official visits.
+                <strong>Note for Agencies:</strong> Ensure your students follow our
+                recommended schedule and utilize the learning portal for consistent progress.
               </div>
               <p className="text-muted">
-                "Standards for courtesy, accountability, responsibility,
-                efficiency and service. It is high time that law enforcement be
-                professionalized. We must implement our policies with
-                professionalism and courtesy."
+                "Success in OET requires consistency and feedback. Our platform ensures
+                accountability and performance tracking across all modules."
               </p>
             </div>
           </div>
         </div>
 
-        {/* Visa Programs Section */}
+        {/* Course Modules Section */}
         <div className="mb-5">
-          <h2 className="text-blue mb-4">Related Visa Programs</h2>
+          <h2 className="text-blue mb-4">OET Modules Covered</h2>
           <div className="row">
-            {visaPrograms.map((program, index) => (
+            {courseModules.map((module, index) => (
               <div key={index} className="col-lg-4 col-md-6 mb-4">
                 <div className="card h-100 shadow-sm">
                   <img
-                    src={program.image}
-                    alt={program.title}
+                    src={module.image}
+                    alt={module.title}
                     className="card-img-top"
                     style={{ height: "200px", objectFit: "cover" }}
                   />
                   <div className="card-body">
-                    <h5 className="text-blue">{program.title}</h5>
+                    <h5 className="text-blue">{module.title}</h5>
                     <p className="card-text text-muted small">
-                      {program.description}
+                      {module.description}
                     </p>
                     <div className="mt-3">
-                      {program.links.map((link, linkIndex) => (
+                      {module.links.map((link, linkIndex) => (
                         <div key={linkIndex} className="mb-2">
                           <a
                             href="#"
-                            className="text-decoration-none d-flex text-blue align-items-center" style={{fontSize:"14px"}}
+                            className="text-decoration-none d-flex text-blue align-items-center"
+                            style={{ fontSize: "14px" }}
                           >
                             <span className="text-blue fw-bold">
                               {linkIndex + 1}.
@@ -152,21 +148,21 @@ const ContentPage = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-blue text-white p-4 rounded mb-4">
+        <div className="bg-primary text-white p-4 rounded mb-4">
           <div className="row align-items-center">
             <div className="col-lg-8">
               <h3 className="mb-2">
-                Ready to Apply for Your Business Visa?
+                Want to Enroll Your Candidates in OET Coaching?
               </h3>
               <p className="mb-0">
-                Get expert guidance through the application process with our
-                professional consultation services.
+                Book a session with our onboarding team and get your agency
+                started with customized OET coaching solutions.
               </p>
             </div>
             <div className="col-lg-4 text-lg-end">
               <button className="btn btn-light btn-lg">
                 <Calendar className="me-2" size={20} />
-                Schedule Consultation
+                Schedule Onboarding
               </button>
             </div>
           </div>

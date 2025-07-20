@@ -74,7 +74,7 @@ const AdmissionModal = ({ isOpen, onClose }) => {
             onChange={handleChange}
             required
           >
-            <option value="">Select Country</option>
+            <option value="">Select your preferred study destination</option>
             {Object.keys(universityData).map((country) => (
               <option key={country} value={country}>
                 {country}
@@ -89,7 +89,7 @@ const AdmissionModal = ({ isOpen, onClose }) => {
             required
             disabled={!form.country}
           >
-            <option value="">Select University</option>
+            <option value="">Select your preferred study university</option>
             {form.country &&
               universityData[form.country].map((uni) => (
                 <option key={uni} value={uni}>
@@ -165,6 +165,7 @@ const AdmissionModal = ({ isOpen, onClose }) => {
           color: #333;
           cursor: pointer;
         }
+          
 
         @keyframes fadeIn {
           from {
