@@ -152,7 +152,7 @@ const MainContent = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-primary text-white p-4 rounded mb-4">
+        <div className="text-white p-4 rounded mb-4" style={{background:"#162799"}}>
           <div className="row align-items-center">
             <div className="col-lg-8">
               <h3 className="mb-2">

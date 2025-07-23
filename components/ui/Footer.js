@@ -28,7 +28,9 @@ const Footer = () => {
                 className="mb-3"
               />
               <p className="text-white mb-4">
-                Sed gravida nisl a porta tincidunt. Integer aliquam nisl.
+                Empowering students with expert guidance and global
+                opportunities. Your journey to international education starts
+                here.
               </p>
             </div>
 
@@ -187,7 +189,7 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <a href="#" className="text-white text-decoration-none">
-                Germany
+                  Germany
                 </a>
               </li>
             </ul>

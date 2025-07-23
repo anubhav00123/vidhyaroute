@@ -2,6 +2,7 @@ import BreadcrumbBanner from '@/components/BreadCrumbBanner'
 import Navbar from '@/components/Navbar'
 import MainContent from '@/components/business/MainContent'
 import Sidebar from '@/components/business/Sidebar'
+import Footer from '@/components/ui/Footer'
 import React from 'react'
 
 const businessvisa = () => {
@@ -15,6 +16,7 @@ const businessvisa = () => {
             <MainContent/>
         </div>
     </div>
+    <Footer/>
     
     
     </>
