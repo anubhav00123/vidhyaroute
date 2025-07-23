@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const universityData = {
   USA: ["Harvard University", "Stanford University", "MIT"],
@@ -26,6 +28,10 @@ const AdmissionModal = ({ isOpen, onClose }) => {
     }));
   };
 
+  const handlePhoneChange = (value) => {
+    setForm((prev) => ({ ...prev, phone: value }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted:", form);
@@ -49,15 +55,20 @@ const AdmissionModal = ({ isOpen, onClose }) => {
             onChange={handleChange}
             required
           />
-          <input
-            className="admission-modal__input"
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
+
+          <PhoneInput
+            country={"us"}
             value={form.phone}
-            onChange={handleChange}
-            required
+            onChange={handlePhoneChange}
+            inputProps={{
+              name: "phone",
+              required: true,
+              placeholder: "Phone Number",
+            }}
+            containerClass="admission-modal__phone-container"
+            inputClass="admission-modal__input"
           />
+
           <input
             className="admission-modal__input"
             type="email"
@@ -67,6 +78,7 @@ const AdmissionModal = ({ isOpen, onClose }) => {
             onChange={handleChange}
             required
           />
+
           <select
             className="admission-modal__select"
             name="country"
@@ -81,6 +93,7 @@ const AdmissionModal = ({ isOpen, onClose }) => {
               </option>
             ))}
           </select>
+
           <select
             className="admission-modal__select"
             name="university"
@@ -97,93 +110,13 @@ const AdmissionModal = ({ isOpen, onClose }) => {
                 </option>
               ))}
           </select>
+
           <button type="submit" className="admission-modal__submit-btn">Submit</button>
         </form>
       </div>
 
-      <style jsx>{`
-        .admission-modal__overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(0,0,0,0.7);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 9999;
-        }
+     
 
-        .admission-modal__container {
-          background: #fff;
-          padding: 2rem;
-          width: 100%;
-          max-width: 600px;
-          border-radius: 12px;
-          position: relative;
-          animation: fadeIn 0.3s ease-in-out;
-        }
-
-        .admission-modal__title {
-          text-align: center;
-          margin-bottom: 1.5rem;
-        }
-
-        .admission-modal__form {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-        }
-
-        .admission-modal__input,
-        .admission-modal__select {
-          padding: 0.8rem;
-          font-size: 1rem;
-          border: 1px solid #ccc;
-          border-radius: 6px;
-        }
-
-        .admission-modal__submit-btn {
-          background-color: #032b66;
-          color: white;
-          padding: 0.8rem;
-          font-size: 1rem;
-          font-weight: 600;
-          border: none;
-          border-radius: 6px;
-          cursor: pointer;
-        }
-
-        .admission-modal__close-btn {
-          position: absolute;
-          top: 12px;
-          right: 20px;
-          font-size: 26px;
-          background: transparent;
-          border: none;
-          color: #333;
-          cursor: pointer;
-        }
-          
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(-15px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @media (max-width: 768px) {
-          .admission-modal__container {
-            width: 90%;
-          }
-        }
-      `}</style>
     </div>
   );
 };
