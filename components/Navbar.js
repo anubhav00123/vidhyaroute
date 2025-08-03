@@ -13,6 +13,23 @@ const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const [isCountriesOpen, setIsCountriesOpen] = useState(false);
 
+  // Country data with flag emojis
+  const countries = [
+    { code: 'uk', name: 'UK', flag: '🇬🇧', path: '/countries/uk' },
+    { code: 'usa', name: 'USA', flag: '🇺🇸', path: '/countries/usa' },
+    { code: 'ireland', name: 'Ireland', flag: '🇮🇪', path: '/countries/ireland' },
+    { code: 'canada', name: 'Canada', flag: '🇨🇦', path: '/countries/canada' },
+    { code: 'germany', name: 'Germany', flag: '🇩🇪', path: '/countries/germany' },
+    { code: 'dubai', name: 'Dubai', flag: '🇦🇪', path: '/countries/dubai' },
+    { code: 'france', name: 'France', flag: '🇫🇷', path: '/countries/france' },
+    { code: 'europe', name: 'Europe', flag: '🇪🇺', path: '/countries/europe' },
+    { code: 'italy', name: 'Italy', flag: '🇮🇹', path: '/countries/italy' },
+    { code: 'australia', name: 'Australia', flag: '🇦🇺', path: '/countries/australia' },
+    { code: 'newzealand', name: 'New Zealand', flag: '🇳🇿', path: '/countries/newzealand' },
+    { code: 'georgia', name: 'Georgia', flag: '🇬🇪', path: '/countries/georgia' },
+    { code: 'malta', name: 'Malta', flag: '🇲🇹', path: '/countries/malta' },
+    { code: 'japan', name: 'Japan', flag: '🇯🇵', path: '/countries/japan' }
+  ];
 
   // Toggle the mobile menu open/close
   const toggleMenu = () => {
@@ -68,7 +85,7 @@ const Navbar = () => {
       {/* ======= Bottom Navbar ======= */}
       <div className="navbar-bottom">
         {/* Centered logo visible on larger screens */}
-        <div className="nav-empty  justify-content-center">
+        <div className="nav-empty justify-content-center">
           <Link href="/">
             <img
               src="/images/logo.png"
@@ -112,51 +129,24 @@ const Navbar = () => {
             <Link href="/oetcoaching" className="nav-link" onClick={closeMenu}>
               Coaching
             </Link>
-            <div className="nav-link dropdown-container">
+            
+            {/* Enhanced Countries Dropdown */}
+            <div className="nav-link dropdown-container countries-dropdown">
               <span>Countries</span>
-              <div className="dropdown-menu">
-                <Link
-                  href="/countries/usa"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  USA
-                </Link>
-                <Link
-                  href="/countries/canada"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Canada
-                </Link>
-                <Link
-                  href="/countries/uk"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  UK
-                </Link>
-                <Link
-                  href="/countries/australia"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Australia
-                </Link>
-                <Link
-                  href="/countries/germany"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Germany
-                </Link>
-                <Link
-                  href="/countries/japan"
-                  className="dropdown-item"
-                  onClick={closeMenu}
-                >
-                  Japan
-                </Link>
+              <div className="dropdown-menu countries-grid">
+                <div className="countries-container">
+                  {countries.map((country) => (
+                    <Link
+                      key={country.code}
+                      href={country.path}
+                      className="country-item"
+                      onClick={closeMenu}
+                    >
+                      <span className="country-flag">{country.flag}</span>
+                      <span className="country-name">{country.name}</span>
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -182,6 +172,7 @@ const Navbar = () => {
       {/* ======= Mobile Overlay (for dim background click-to-close) ======= */}
       {isMenuOpen && <div className="mobile-overlay" onClick={closeMenu}></div>}
       <AdmissionModal isOpen={showModal} onClose={() => setShowModal(false)} />
+
     </>
   );
 };
