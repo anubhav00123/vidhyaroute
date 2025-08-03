@@ -108,6 +108,9 @@ a:hover {
 
 /**************************  Navbar  **********************************/
 
+
+/* // country Dropdown Navbar  */
+
 .dropdown-container {
   position: relative;
   cursor: pointer;
@@ -181,7 +184,7 @@ a:hover {
 }
 
 .country-flag {
-  font-size: 20px;
+  font-size: 25px;
   margin-right: 12px;
   width: 28px;
   display: flex;
@@ -243,7 +246,7 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
-
+/* // country Dropdown Navbar  */
 
 .navbar-top {
   background-color: var(--primary-color);
