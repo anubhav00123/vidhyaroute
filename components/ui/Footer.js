@@ -193,6 +193,40 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
+            <h5 className="text-white mb-4 position-relative">
+              Top Universities
+              <div
+                className="border-bottom border-primary position-absolute"
+                style={{ width: 50, height: 2, bottom: -10, left: 0 }}
+              ></div>
+            </h5>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none">
+                  University of Liverpool
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none">
+                  Harvard University
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none">
+                  Greenwich University
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none">
+                  Zurich University
+                </a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-white text-decoration-none">
+                  Boston University
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -206,9 +240,9 @@ const Footer = () => {
                 className="text-decoration-none"
                 style={{ color: "#5E789C" }}
               >
-                immigratie
+                Vidhyaaroute
               </a>{" "}
-              - 2024
+              - 2025
             </p>
           </div>
         </div>

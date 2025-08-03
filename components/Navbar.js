@@ -11,6 +11,7 @@ import AdmissionModal from "./AdmissionModal";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [isCountriesOpen, setIsCountriesOpen] = useState(false);
 
 
   // Toggle the mobile menu open/close
@@ -44,9 +45,15 @@ const Navbar = () => {
 
         <div className="right-info">
           <div className="social-icons">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaTwitter /></a>
+            <a href="#">
+              <FaFacebookF />
+            </a>
+            <a href="#">
+              <FaInstagram />
+            </a>
+            <a href="#">
+              <FaTwitter />
+            </a>
           </div>
 
           <div className="search-container">
@@ -63,19 +70,21 @@ const Navbar = () => {
         {/* Centered logo visible on larger screens */}
         <div className="nav-empty  justify-content-center">
           <Link href="/">
-          <img
-            src="/images/logo.png"
-            alt="Vidhyaarohee"
-            style={{ width: 80, height: 80 }}
-            className="mt-2 mobile-logo"
-          />
+            <img
+              src="/images/logo.png"
+              alt="Vidhyaarohee"
+              style={{ width: 80, height: 80 }}
+              className="mt-2 mobile-logo"
+            />
           </Link>
         </div>
 
         <div className="navbar-bottom-wrapper">
           {/* Button Section */}
           <div className="profile-section">
-            <button className="btn-blue" onClick={() => setShowModal(true)}>Get Your Admission</button>
+            <button className="btn-blue" onClick={() => setShowModal(true)}>
+              Get Your Admission
+            </button>
           </div>
 
           {/* ======= Navigation Links (Desktop & Mobile) ======= */}
@@ -91,13 +100,72 @@ const Navbar = () => {
               </div>
             )}
 
-            <Link href="/" className="nav-link" onClick={closeMenu}>Home</Link>
-            <Link href="/about" className="nav-link" onClick={closeMenu}>About</Link>
-            <Link href="/businessvisa" className="nav-link" onClick={closeMenu}>Our Services</Link>
-            <Link href="/oetcoaching" className="nav-link" onClick={closeMenu}>Coaching</Link>
-            <Link href="/countries" className="nav-link" onClick={closeMenu}>Countries</Link>
-            <Link href="/teamdetails" className="nav-link" onClick={closeMenu}>Team</Link>
-            <Link href="/contact" className="nav-link" onClick={closeMenu}>Contact Us</Link>
+            <Link href="/" className="nav-link" onClick={closeMenu}>
+              Home
+            </Link>
+            <Link href="/about" className="nav-link" onClick={closeMenu}>
+              About
+            </Link>
+            <Link href="/businessvisa" className="nav-link" onClick={closeMenu}>
+              Our Services
+            </Link>
+            <Link href="/oetcoaching" className="nav-link" onClick={closeMenu}>
+              Coaching
+            </Link>
+            <div className="nav-link dropdown-container">
+              <span>Countries</span>
+              <div className="dropdown-menu">
+                <Link
+                  href="/countries/usa"
+                  className="dropdown-item"
+                  onClick={closeMenu}
+                >
+                  USA
+                </Link>
+                <Link
+                  href="/countries/canada"
+                  className="dropdown-item"
+                  onClick={closeMenu}
+                >
+                  Canada
+                </Link>
+                <Link
+                  href="/countries/uk"
+                  className="dropdown-item"
+                  onClick={closeMenu}
+                >
+                  UK
+                </Link>
+                <Link
+                  href="/countries/australia"
+                  className="dropdown-item"
+                  onClick={closeMenu}
+                >
+                  Australia
+                </Link>
+                <Link
+                  href="/countries/germany"
+                  className="dropdown-item"
+                  onClick={closeMenu}
+                >
+                  Germany
+                </Link>
+                <Link
+                  href="/countries/japan"
+                  className="dropdown-item"
+                  onClick={closeMenu}
+                >
+                  Japan
+                </Link>
+              </div>
+            </div>
+
+            <Link href="/teamdetails" className="nav-link" onClick={closeMenu}>
+              Team
+            </Link>
+            <Link href="/contact" className="nav-link" onClick={closeMenu}>
+              Contact Us
+            </Link>
           </div>
 
           {/* ======= Mobile Hamburger Icon ======= */}
@@ -114,7 +182,6 @@ const Navbar = () => {
       {/* ======= Mobile Overlay (for dim background click-to-close) ======= */}
       {isMenuOpen && <div className="mobile-overlay" onClick={closeMenu}></div>}
       <AdmissionModal isOpen={showModal} onClose={() => setShowModal(false)} />
-
     </>
   );
 };

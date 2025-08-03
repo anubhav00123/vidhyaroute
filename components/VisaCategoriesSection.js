@@ -17,7 +17,7 @@ const VisaCategoriesSection = () => {
         "Our End-to-End Admission Process",
         "Where We Place Students",
       ],
-      link: "#",
+      link: "/overseasadmission",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ const VisaCategoriesSection = () => {
         "Our Loan Assistance Includes:",
         "Why Loan Support Matters",
       ],
-      link: "#",
+      link: "/educationloan",
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ const VisaCategoriesSection = () => {
         "Visa Support for All Major Destinations",
         "Our Visa Assistance Process",
       ],
-      link: "#",
+      link: "/studentvisa",
     },
   ];
 

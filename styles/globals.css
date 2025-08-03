@@ -108,6 +108,40 @@ a:hover {
 
 /**************************  Navbar  **********************************/
 
+.dropdown-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  min-width: 180px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+
 .navbar-top {
   background-color: var(--primary-color);
   font-size: 14px;
