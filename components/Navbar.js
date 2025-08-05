@@ -52,11 +52,11 @@ const Navbar = () => {
           </div>
           <div className="info-item">
             <GoLocation />
-            <span className="info-text">12 Queen Park, LA, USA</span>
+            <span className="info-text">	UG-49 Charmwood plaza, Faridabad 121009</span>
           </div>
           <div className="info-item">
             <PiClockLight />
-            <span className="info-text">Mon - Sat: 9.00 to 18.00</span>
+	<span className='info-text'>Mon - Sat: 9:00 - 18:00</span>
           </div>
         </div>
 
@@ -117,19 +117,36 @@ const Navbar = () => {
               </div>
             )}
 
-            <Link href="/" className="nav-link" onClick={closeMenu}>
-              Home
-            </Link>
-            <Link href="/about" className="nav-link" onClick={closeMenu}>
-              About
-            </Link>
-            <Link href="/businessvisa" className="nav-link" onClick={closeMenu}>
-              Our Services
-            </Link>
-            <Link href="/oetcoaching" className="nav-link" onClick={closeMenu}>
-              Coaching
-            </Link>
-            
+           <Link
+							href='/'
+							className='nav-link'
+							onClick={closeMenu}>
+							Home
+						</Link>
+						<Link
+							href='/about'
+							className='nav-link'
+							onClick={closeMenu}>
+							About
+						</Link>
+						<Link
+							href='/businessvisa'
+							className='nav-link'
+							onClick={closeMenu}>
+							Our Services
+						</Link>
+						<Link
+							href='/countries'
+							className='nav-link'
+							onClick={closeMenu}>
+							Countries
+						</Link>
+						<Link
+							href='/contact'
+							className='nav-link'
+							onClick={closeMenu}>
+							Contact Us
+						</Link>
             {/* Enhanced Countries Dropdown */}
             <div className="nav-link dropdown-container countries-dropdown">
               <span>Countries</span>
@@ -150,12 +167,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <Link href="/teamdetails" className="nav-link" onClick={closeMenu}>
-              Team
-            </Link>
-            <Link href="/contact" className="nav-link" onClick={closeMenu}>
-              Contact Us
-            </Link>
+          
           </div>
 
           {/* ======= Mobile Hamburger Icon ======= */}
